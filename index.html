@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iftikhar Umrani | UAV cybersecurity researcher and lecturer</title>
+<meta name="description" content="Portfolio of Iftikhar Umrani: PhD researcher in UAV cybersecurity at Walton Institute, SETU, with lecturing experience in computing, networking and telecom.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F1F4F2;--panel:#E4EBE8;--ink:#12202B;--muted:#4F5F69;--rule:#C5D0CC;--teal:#0E5A5C;--spoof:#B3382C;
+--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Public Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1.5rem}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--sans)}
+a{color:var(--teal);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{color:var(--spoof)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:2px}
+.wrap{display:grid;grid-template-columns:17rem minmax(0,1fr);max-width:78rem;margin:0 auto}
+aside{position:sticky;top:0;align-self:start;height:100vh;padding:2.5rem 2rem;border-right:1px solid var(--rule);display:flex;flex-direction:column;gap:1.5rem}
+aside .who{font:600 1.35rem/1.2 var(--serif);margin:0}
+aside .who small{display:block;font:400 .9rem/1.45 var(--sans);color:var(--muted);margin-top:.5rem}
+nav ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+nav a{display:block;padding:.3rem 0;color:var(--ink);text-decoration:none;font-size:.97rem;border-left:2px solid transparent;padding-left:.75rem;margin-left:-.75rem}
+nav a:hover,nav a.on{border-left-color:var(--teal);color:var(--teal)}
+aside .contact{margin-top:auto;font-size:.9rem;color:var(--muted)}
+aside .contact a{display:block;overflow-wrap:anywhere}
+main{padding:0 clamp(1.25rem,5vw,4.5rem) 6rem}
+section{padding-top:4.5rem;max-width:46rem}
+h2{font:400 clamp(1.9rem,3.5vw,2.6rem)/1.15 var(--serif);margin:0 0 1.5rem;letter-spacing:-.01em}
+h3{font:600 1.15rem/1.3 var(--serif);margin:2rem 0 .5rem}
+p{margin:0 0 1rem}
+.hero{padding-top:3.5rem;max-width:none}
+.hero h1{font:400 clamp(2.4rem,6vw,4.4rem)/1.05 var(--serif);letter-spacing:-.02em;margin:0 0 1rem;max-width:14ch}
+.hero .lead{font-size:1.25rem;line-height:1.5;max-width:36rem;color:var(--ink)}
+.chart{margin:2.5rem 0 .5rem;max-width:44rem}
+.chart svg{width:100%;height:auto;display:block}
+.chart figcaption{font-size:.88rem;color:var(--muted);margin-top:.5rem}
+.draw{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw 2.6s .3s cubic-bezier(.4,0,.2,1) forwards}
+.draw.late{animation-delay:1.1s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.fade{opacity:0;animation:in .6s 2.9s forwards}
+@keyframes in{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.draw{animation:none;stroke-dashoffset:0}.fade{animation:none;opacity:1}html{scroll-behavior:auto}}
+.quick{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:1.5rem;padding:0;list-style:none}
+ul.plain{padding-left:1.2rem;margin:0 0 1rem}
+ul.plain li{margin-bottom:.4rem}
+.log{list-style:none;margin:0;padding:0}
+.log>li{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:1rem;padding:1rem 0;border-top:1px solid var(--rule)}
+.log .d{font-size:.92rem;color:var(--muted);padding-top:.15rem}
+.log .t{font-weight:600;margin:0 0 .15rem}
+.log .v{margin:0 0 .35rem;color:var(--muted);font-size:.97rem}
+.log p{margin-bottom:.4rem}
+.log .links{font-size:.95rem;margin:0}
+h3.yr{margin:2.5rem 0 .25rem;font-size:1.4rem}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1rem}
+.filters button{font:500 .92rem var(--sans);padding:.4rem .9rem;border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:999px;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--teal);border-color:var(--teal);color:#fff}
+.filters button:hover{border-color:var(--teal)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem}
+.panel{background:var(--panel);padding:1.25rem 1.5rem;border-radius:4px}
+.panel h3{margin-top:0}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem .5rem;list-style:none;padding:0;margin:0 0 1rem}
+.tags li{background:var(--panel);padding:.2rem .7rem;border-radius:999px;font-size:.93rem}
+.role{padding:1.25rem 0;border-top:1px solid var(--rule)}
+.role h3{margin:0}
+.role .when{color:var(--muted);font-size:.95rem;margin:.1rem 0 .75rem}
+footer{max-width:46rem;padding-top:4rem;color:var(--muted);font-size:.9rem}
+@media (max-width:60rem){
+ .wrap{grid-template-columns:1fr}
+ aside{position:static;height:auto;border-right:0;border-bottom:1px solid var(--rule);padding:1.5rem 1.25rem;gap:1rem}
+ nav ul{display:flex;flex-wrap:wrap;gap:.25rem 1rem}
+ nav a{border-left:0;padding-left:0;margin-left:0}
+ aside .contact{margin-top:0}
+ .log>li{grid-template-columns:1fr;gap:.2rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside>
+ <p class="who">Iftikhar Umrani<small>PhD researcher in UAV cybersecurity, Walton Institute, SETU. Lecturing experience in computing.</small></p>
+ <nav aria-label="Sections"><ul>
+  <li><a href="#about">About</a></li>
+  <li><a href="#research">Research</a></li>
+  <li><a href="#publications">Publications</a></li>
+  <li><a href="#teaching">Teaching</a></li>
+  <li><a href="#supervision">Supervision</a></li>
+  <li><a href="#engagement">Talks, posters and outreach</a></li>
+  <li><a href="#training">Training</a></li>
+  <li><a href="#experience">Experience and education</a></li>
+  <li><a href="#skills">Skills</a></li>
+  <li><a href="#contact">Contact</a></li>
+ </ul></nav>
+ <div class="contact">
+  <a href="https://www.linkedin.com/in/iftikharumrani" target="_blank" rel="noopener">LinkedIn</a>
+  <a href="https://waltoninstitute.ie/about/staff/muhammad-iftikhar-umrani" target="_blank" rel="noopener">Walton Institute staff page</a>
+ </div>
+</aside>
+
+<main>
+<section class="hero" id="top">
+ <h1>Securing the navigation of unmanned aircraft</h1>
+ <p class="lead">I am Iftikhar Umrani, a PhD researcher at Walton Institute, SETU, working on UAV cybersecurity, with lecturing experience in computing, networking and telecom.</p>
+ <ul class="quick">
+  <li><a href="#publications" target="_blank" rel="noopener">Publications</a></li>
+  <li><a href="#teaching" target="_blank" rel="noopener">Teaching</a></li>
+  <li><a href="#engagement" target="_blank" rel="noopener">Talks and outreach</a></li>
+  <li><a href="https://www.linkedin.com/in/iftikharumrani" target="_blank" rel="noopener">LinkedIn</a></li>
+ </ul>
+</section>
+
+<section id="about">
+ <h2>About</h2>
+ <p>My background brings together computing, networking, telecom, cybersecurity, and applied systems work. I enjoy explaining technical subjects in a clear and practical way, using examples, labs, and projects so students can connect the theory with real problems.</p>
+ <p>Along with teaching, I have been involved in course development, assessment, curriculum support, accreditation work, project supervision, and departmental activities. I like a classroom where students feel supported, engaged, and challenged.</p>
+ <p>I joined Walton Institute as a PhD research student in the SFI (Science Foundation Ireland) CONNECT Project in February 2023. My research aims to improve the efficiency and reliability of UAV operations while minimizing potential threats, using deep learning based security measures.</p>
+</section>
+
+<section id="research">
+ <h2>Research</h2>
+ <p><strong>PhD in Computing, South East Technological University.</strong> Thesis: Artificial Intelligence enabled UAV Cybersecurity. The work covers UAV cybersecurity, cyber physical systems, machine learning, and experimental validation.</p>
+ <h3>Where the work is done</h3>
+ <p>Programmable Autonomous System Lab, Walton Institute, SETU. Project name: UAVSec.</p>
+ <h3>What I built and used</h3>
+ <ul class="plain">
+  <li>UAV software stack integration using Gazebo, PX4, ROS/MAVROS, QGroundControl, and MAVLink.</li>
+  <li>Testing and debugging of drone behaviour under normal and degraded navigation conditions.</li>
+  <li>Analysis of flight logs and telemetry using Python and UAV analysis tools.</li>
+  <li>Design and evaluation of practical UAV test scenarios, including faulty and spoofed cases.</li>
+  <li>Documentation of test cases, observed behaviour, failure modes, and validation results.</li>
+ </ul>
+ <h3>Topics of the published and presented work</h3>
+ <ul class="plain">
+  <li>A unified threat taxonomy (U-TUAST) and cross layer survey of UAV cybersecurity challenges.</li>
+  <li>False data injection attacks on UAV navigation and obstacle avoidance, including GPS and LiDAR spoofing, in a simulation testbed.</li>
+  <li>Trust in AI driven decision making for cyber physical systems.</li>
+  <li>Stealthy GNSS spoofing and estimator drift in UAV navigation systems (poster, CONNECT Plenary 2025).</li>
+ </ul>
+ <h3>In progress</h3>
+ <p>Journal article, working title: UAV Trajectory Deviation Under GNSS Spoofing in an Attacker Following Victim Scenario: A Digital Twin Study.</p>
+</section>
+
+<section id="publications">
+ <h2>Publications</h2>
+ <ul class="log"><li><span class="d">2026</span><div><p class="t">Toward secure complex UAV cyber-physical systems: A unified threat taxonomy and cross-layer survey of cybersecurity challenges</p><p class="v">Internet of Things (Elsevier), published 15 Feb 2026</p><p>Introduces a Unified Taxonomy of UAV Security Threats (U-TUAST), which classifies security attacks and their effects across layers and is systematically evaluated.</p><p class="links"><a href="https://www.sciencedirect.com/science/article/pii/S2542660526000326" target="_blank" rel="noopener">Paper on ScienceDirect</a>, <a href="https://doi.org/10.1016/j.iot.2026.101902" target="_blank" rel="noopener">DOI</a>, <a href="https://waltoninstitute.ie/news-and-events/news/publication-toward-secure-complex-uav-cyber-physical-systems-a-unified-threat-taxonomy-and-cross-layer-survey-of-cybersecurity-challenges" target="_blank" rel="noopener">Walton Institute news</a>, <a href="https://lnkd.in/p/di6MCM39" target="_blank" rel="noopener">LinkedIn short link</a></p></div></li>
+<li><span class="d">2024</span><div><p class="t">False Data Injection Attacks on Unmanned Aerial Vehicles used for Package Delivery</p><p class="v">2nd IEEE Cyber RCI Conference, SETU Carlow, Ireland, 26 Nov 2024</p><p>A simulation based experimental testbed that integrates the PX4 autopilot, the Gazebo simulator, and ROS to launch attacks on UAV navigation and obstacle avoidance systems, including GPS and LiDAR spoofing.</p><p class="links"><a href="https://ieeexplore.ieee.org/document/10939197" target="_blank" rel="noopener">Paper on IEEE Xplore</a>, <a href="https://doi.org/10.1109/Cyber-RCI60769.2024.10939197" target="_blank" rel="noopener">DOI</a>, <a href="https://waltoninstitute.ie/news-and-events/news/advancing-uav-cybersecurity-insights-from-uavsec-at-ieee-cyber-rci" target="_blank" rel="noopener">Walton Institute news</a></p></div></li>
+<li><span class="d">2024</span><div><p class="t">Building Trust in AI-Driven Decision Making for Cyber-Physical Systems (CPS): A Comprehensive Review</p><p class="v">29th IEEE ETFA Conference, Padova, Italy, 10 to 13 Sep 2024</p><p>Explores the integration of AI and ML in Cyber-Physical Systems across sectors such as agriculture, autonomous systems, and healthcare, highlighting opportunities for enhanced efficiency and automation.</p><p class="links"><a href="https://ieeexplore.ieee.org/abstract/document/10710855" target="_blank" rel="noopener">Paper on IEEE Xplore</a>, <a href="https://ieeexplore.ieee.org/document/10710855" target="_blank" rel="noopener">IEEE Xplore (conference record)</a>, <a href="https://waltoninstitute.ie/news-and-events/news/unveiling-the-black-box-trusting-ai-in-the-era-of-cyber-physical-systems" target="_blank" rel="noopener">Walton Institute news</a>, <a href="https://lnkd.in/p/dgEdcn9P" target="_blank" rel="noopener">LinkedIn short link</a></p></div></li>
+<li><span class="d">Earlier</span><div><p class="t">Network Forensic Analysis of Twitter Application on Android OS</p><p class="v">16th IEEE International Frontiers of Information Technology (FIT) Conference</p><p class="links"><a href="https://ieeexplore.ieee.org/document/10043084" target="_blank" rel="noopener">Paper on IEEE Xplore</a></p></div></li>
+<li><span class="d">Earlier</span><div><p class="t">Tactile Internet to the Development of Smart Cities: Issues, Methods and Solutions</p><p class="v">2020 1st International Research Conference on Business, Management, and Computer Technology (IRCoBMCT), SZABIST Larkana, Feb 2020</p><p>Co-authored with A. Aziz and M. Siddiqui.</p></div></li></ul>
+</section>
+
+<section id="teaching">
+ <h2>Teaching</h2>
+ <h3>South East Technological University, part time teaching work (Jan 2024 to May 2026)</h3>
+ <ul class="plain">
+  <li>Lab demonstrations, assignment evaluation, and grading for the Secure Programming and Scripting course, using Moodle and Slack for course support and student communication.</li>
+ </ul>
+ <h3>SZABIST University Pakistan, lecturer in computer science (Sep 2017 to Jan 2023)</h3>
+ <p>Courses taught: Network Security and Encryption, Computer Architecture, Digital Logic Design, Professional Practices, Wireless and Mobile Technologies, Operating Systems, System Administration, Digital Signal Processing, Data Communication, Routing and Switching, Artificial Intelligence, Calculus, and Analytical Geometry.</p>
+ <ul class="plain">
+  <li>Used Moodle for course management, teaching material, assignments, and student communication.</li>
+  <li>Gained strong experience in online teaching and the use of teaching aids during COVID and afterwards.</li>
+  <li>Member of the Board of Studies: student consultation, course evaluation, assignments, exams, question paper development, and academic records.</li>
+  <li>Member of the Curriculum Design Committee, contributing to curriculum discussions and proposals.</li>
+  <li>Worked closely on programme accreditation reports and was part of the core team when the degree programme received accreditation from the awarding body (NCEAC).</li>
+  <li>Member of the Departmental Annual Self Assessment Report team.</li>
+  <li>Cluster Head for the Computer Engineering and Information Technology cluster, and supporting faculty for the Telecommunication and Networking and Automation Control and Intelligent Systems clusters: exam paper review, moderation, marking checks, and faculty guidance.</li>
+  <li>IEEE student branch adviser.</li>
+  <li>Member of the organising committee for national and international research conferences.</li>
+ </ul>
+ <h3>Workshops conducted</h3>
+ <p>I conducted 10 workshops and seminars and organised FYP exhibitions. Examples: Cisco Packet Tracer, Introduction to Python Programming (installation and basic libraries), and Recommendation System using Machine Learning, each a one day workshop.</p>
+ <h3>Teaching training during the PhD</h3>
+ <p>Practical Pedagogy for Researchers (see Training below).</p>
+</section>
+
+<section id="supervision">
+ <h2>Supervision</h2>
+ <h3>South East Technological University</h3>
+ <p>Two student projects supervised.</p>
+ <ul class="plain">
+  <li>Hydrate Mate App</li>
+  <li>Digital Memorials</li>
+ </ul>
+ <h3>SZABIST University Pakistan</h3>
+ <p>More than 20 final year projects supervised, with weekly guidance on project management, report writing, deliverables, final thesis preparation, project delivery, and evaluation seminars, while serving as Final Year Project Coordinator.</p>
+ <h3>Projects initiated under my supervision that received funding</h3>
+ <div class="cols">
+  <div class="panel"><h3>ASAAN KISAN: spinach leaf rot spot detection</h3><p>An Android application that detects leaf rot spot disease in spinach from plant images. The dataset has three classes: healthy, infected, and faulty. It was created, trained, tested, and implemented in Python using the deep learning models VGG-19 and VGG-16, then added to Android Studio as a TensorFlow Lite (tflite) model.</p></div>
+  <div class="panel"><h3>Masked face recognition using machine learning</h3><p>The project concentrates on the eyes and forehead and uses a pre-trained deep neural network to recognise masked faces more accurately. Implemented with OpenCV and Python.</p></div>
+ </div>
+ <h3>Other supervised projects</h3>
+ <ul class="plain">
+  <li>Final year project: IoT Based Smart Health Monitoring Alert System</li>
+  <li>Final year project: Real Time Traffic Performance Study over MPLS VPN With DiffServ</li>
+  <li>Semester project: GSM Based Home Automation using Arduino UNO</li>
+  <li>Semester project: Obstacle Avoiding Robotic Car using Arduino UNO</li>
+  <li>Semester project: Line Following Robotic Car using Arduino UNO</li>
+ </ul>
+</section>
+
+<section id="engagement">
+ <h2>Talks, posters and outreach</h2>
+ <p>Conference papers, posters, invited talks, public engagement, secondments, and media coverage from 2023 to 2026, with links to the original posts and pages.</p>
+ <div class="filters" role="group" aria-label="Filter by type"><button type="button" data-f="paper" aria-pressed="false">Conference papers</button><button type="button" data-f="poster" aria-pressed="false">Posters</button><button type="button" data-f="talk" aria-pressed="false">Talks and presentations</button><button type="button" data-f="public" aria-pressed="false">Public engagement</button><button type="button" data-f="collab" aria-pressed="false">Secondments and visits</button><button type="button" data-f="media" aria-pressed="false">News and media</button></div>
+ <div id="acts"><h3 class="yr">2026</h3><ul class="log">
+<li data-type="media"><span class="d">Mar 2026</span><div><p class="t">Dissemination of the Internet of Things journal paper on the unified UAV threat taxonomy</p><p class="v">Walton Institute website. News and media.</p><p class="links"><a href="https://waltoninstitute.ie/news-and-events/news/publication-toward-secure-complex-uav-cyber-physical-systems-a-unified-threat-taxonomy-and-cross-layer-survey-of-cybersecurity-challenges" target="_blank" rel="noopener">Walton Institute news</a>, <a href="https://lnkd.in/p/di6MCM39" target="_blank" rel="noopener">LinkedIn short link</a></p></div></li>
+<li data-type="talk"><span class="d">16 Feb 2026</span><div><p class="t">Research pitch on UAV cybersecurity and GNSS spoofing resilience</p><p class="v">Research Sparks, SETU Cork Road Campus. Talks and presentations.</p></div></li>
+</ul>
+<h3 class="yr">2025</h3><ul class="log">
+<li data-type="media"><span class="d">18 Nov 2025</span><div><p class="t">Article on the UAVSec project</p><p class="v">Silicon Republic, with SETU Walton Institute. News and media.</p><p class="links"><a href="https://www.siliconrepublic.com/machines/setu-drones-security-communications-engineering-computing-uav-research" target="_blank" rel="noopener">Silicon Republic article</a></p></div></li>
+<li data-type="public"><span class="d">12 Nov 2025</span><div><p class="t">Science Week public talk: Drones in Everyday Life, Promise, Potential, and Protection</p><p class="v">Clonmel Library, with SETU Outreach. Public engagement.</p><p class="links"><a href="https://www.siliconrepublic.com/innovation/science-week-2025-30-anniversary-events-ireland-list" target="_blank" rel="noopener">Silicon Republic</a>, <a href="https://www.independent.ie/regionals/carlow/news/from-wine-science-to-flying-robots-south-east-science-festival-uncorks-curiosity-across-waterford-tipperary-and-carlow/a960158230.html" target="_blank" rel="noopener">Independent.ie</a>, <a href="https://www.tipperarylive.ie/news/clonmel/1935201/drone-technology-to-be-put-under-the-spotlight-in-researcher-s-talk-at-clonmel-library.html" target="_blank" rel="noopener">Tipperary Live</a>, <a href="https://www.tipperarylibraries.ie/event/drones-in-everyday-life-promise-potential-and-protection/" target="_blank" rel="noopener">Tipperary Libraries</a>, <a href="https://waltoninstitute.ie/news-and-events/news/walton-institute-science-week-2025" target="_blank" rel="noopener">Walton Institute</a></p></div></li>
+<li data-type="poster"><span class="d">21 to 23 Oct 2025</span><div><p class="t">Poster presentation at the EU Conexus International Conference</p><p class="v">Catholic University of Valencia. Posters.</p><p class="links"><a href="https://www.eu-conexus.eu/wp-content/uploads/wpforms/35989-2695ac897867b4bd65114dee46806c89/Muhammad-Iftikhar-Umrani_SETU-52b41c5d207492a51423c015710a7f09.pdf" target="_blank" rel="noopener">Submitted poster (PDF)</a></p></div></li>
+<li data-type="talk"><span class="d">10 Sep 2025</span><div><p class="t">Co-led the Overleaf Technical Writing Workshop: research ready figures, mathematical expressions, and plots for LaTeX papers</p><p class="v">Emerging Networks Lab, Walton Institute. Talks and presentations.</p></div></li>
+<li data-type="talk"><span class="d">4 Jun 2025</span><div><p class="t">Oral presentation of research progress</p><p class="v">SETU Postgraduate Research Conference. Talks and presentations.</p><p class="links"><a href="https://www.setu.ie/events/postgraduate-research-conference" target="_blank" rel="noopener">SETU event page</a></p></div></li>
+<li data-type="poster"><span class="d">28 to 29 May 2025</span><div><p class="t">Poster: Stealthy GNSS Spoofing for Estimator Drift in UAV Navigation Systems</p><p class="v">CONNECT Plenary, Trinity College Dublin. Posters.</p></div></li>
+<li data-type="poster"><span class="d">8 to 9 Apr 2025</span><div><p class="t">Poster at the COALESCE Plenary and Training School</p><p class="v">CONNECT Centre, Trinity College Dublin. Posters.</p></div></li>
+<li data-type="public"><span class="d">3 Apr 2025</span><div><p class="t">Live UAVSec demonstration and technical briefing, Innovation Zone</p><p class="v">Waterford Business Expo. Public engagement.</p><p class="links"><a href="https://www.linkedin.com/posts/waltoninstitute_innovation-research-euinmyregion-activity-7313573510142910464-gkpv" target="_blank" rel="noopener">LinkedIn post</a></p></div></li>
+<li data-type="collab"><span class="d">Dec 2024 to Jan 2025</span><div><p class="t">COALESCE research visit with two guest talks</p><p class="v">Walton Institute and COALESCE. Secondments and visits.</p><p class="links"><a href="https://coalesce-horizon.eu/walton-institute-researcher-visits-mite-and-dha-suffa-university/" target="_blank" rel="noopener">COALESCE news</a>, <a href="https://waltoninstitute.ie/news-and-events/news/walton-institute-researcher-visits-mite-and-dha-suffa-university" target="_blank" rel="noopener">Walton Institute news</a></p></div></li>
+</ul>
+<h3 class="yr">2024</h3><ul class="log">
+<li data-type="paper"><span class="d">26 Nov 2024</span><div><p class="t">Presented: False Data Injection Attacks on Unmanned Aerial Vehicles used for Package Delivery</p><p class="v">2nd IEEE Cyber RCI Conference, SETU Carlow. Conference papers.</p><p class="links"><a href="https://doi.org/10.1109/Cyber-RCI60769.2024.10939197" target="_blank" rel="noopener">DOI</a>, <a href="https://waltoninstitute.ie/news-and-events/news/advancing-uav-cybersecurity-insights-from-uavsec-at-ieee-cyber-rci" target="_blank" rel="noopener">Walton Institute news</a></p></div></li>
+<li data-type="collab"><span class="d">1 to 31 Oct 2024</span><div><p class="t">DUCA secondment: collaborative research on resilient digital systems for UAVs</p><p class="v">Cubit Innovation Labs, Pisa, Italy. Secondments and visits.</p><p class="links"><a href="https://www.irit.fr/duca/a-collaborative-effort-for-a-resilient-digital-future-insights-from-the-duca-project/" target="_blank" rel="noopener">DUCA project article</a></p></div></li>
+<li data-type="paper"><span class="d">10 to 13 Sep 2024</span><div><p class="t">Presented: Building Trust in AI-Driven Decision Making for Cyber-Physical Systems</p><p class="v">29th IEEE ETFA Conference, Padova, Italy. Conference papers.</p><p class="links"><a href="https://ieeexplore.ieee.org/document/10710855" target="_blank" rel="noopener">IEEE Xplore</a>, <a href="https://waltoninstitute.ie/news-and-events/news/unveiling-the-black-box-trusting-ai-in-the-era-of-cyber-physical-systems" target="_blank" rel="noopener">Walton Institute news</a>, <a href="https://lnkd.in/p/dgEdcn9P" target="_blank" rel="noopener">LinkedIn short link</a></p></div></li>
+<li data-type="talk"><span class="d">8 Aug 2024</span><div><p class="t">UAVSec presentation: Intelligent and Autonomous Security System for UAVs</p><p class="v">Nanjing University delegation visit, Walton Institute. Talks and presentations.</p></div></li>
+<li data-type="poster"><span class="d">5 Jun 2024</span><div><p class="t">Poster: Impact of False Data Injection Attacks on UAV Missions</p><p class="v">SETU Research Postgraduate Conference. Posters.</p></div></li>
+<li data-type="poster"><span class="d">24 May 2024</span><div><p class="t">Poster: Cybersecurity for Intelligent UAV Systems, covering the experimental testbed and simulated FDI attacks</p><p class="v">Computing Expo, SETU. Posters.</p></div></li>
+<li data-type="poster"><span class="d">21 May 2024</span><div><p class="t">Poster: Intelligent and Autonomous Security System for UAVs</p><p class="v">SECURENET Summit 2024, UCD Dublin. Posters.</p><p class="links"><a href="https://www.linkedin.com/posts/waltoninstitute_uavsec-uavsec-ai-activity-7206928609620439040-WzCN" target="_blank" rel="noopener">LinkedIn post</a></p></div></li>
+<li data-type="talk"><span class="d">14 to 15 May 2024</span><div><p class="t">Oral and poster presentations of UAVSec research</p><p class="v">CONNECT Plenary, Clonmel. Talks and presentations.</p></div></li>
+</ul>
+<h3 class="yr">2023</h3><ul class="log">
+<li data-type="public"><span class="d">15 Nov 2023</span><div><p class="t">Science Week public talk: The Perils and Promises of AI, for school students and the public</p><p class="v">Clonmel Library. Public engagement.</p><p class="links"><a href="https://www.linkedin.com/posts/waltoninstitute_scienceweek23-southeastsciencefestival-artificialintelligence-activity-7132314292317495297-tqlC/" target="_blank" rel="noopener">LinkedIn post</a></p></div></li>
+<li data-type="media"><span class="d">11 Oct 2023</span><div><p class="t">News article: Walton Institute&#x27;s Research to Address Drone Security</p><p class="v">Walton Institute website and LinkedIn. News and media.</p><p class="links"><a href="https://waltoninstitute.ie/news-and-events/news/walton-institutes-research-to-address-drone-security" target="_blank" rel="noopener">Walton Institute news</a></p></div></li>
+<li data-type="poster"><span class="d">11 Sep 2023</span><div><p class="t">Poster at SECURENET 2023, on security and privacy of 5G, 6G and IoT systems</p><p class="v">UCD Dublin. Posters.</p><p class="links"><a href="https://netslab.ucd.ie/securenet2023/" target="_blank" rel="noopener">SECURENET 2023</a></p></div></li>
+<li data-type="poster"><span class="d">30 to 31 Aug 2023</span><div><p class="t">Poster: Addressing the Security of UAVs</p><p class="v">CONNECT-LERO Summit, Athlone. Posters.</p></div></li>
+</ul></div>
+</section>
+
+<section id="training">
+ <h2>Training</h2>
+ <h3>Modules completed during the PhD</h3>
+ <ul class="plain">
+  <li>Academic Writing for Researchers</li>
+  <li>Research Planning and Project Management</li>
+  <li>Data Mining</li>
+  <li>Research Integrity and Ethics</li>
+  <li>Practical Pedagogy for Researchers</li>
+ </ul>
+ <h3>Courses and workshops</h3>
+ <ul class="plain">
+  <li>SETU Moodle, Epigeum Research Integrity (Second Edition), 10 May 2025, completion certificate.</li>
+  <li>SETU Export Controls Training, 15 May 2025, completion certificate.</li>
+  <li>GDPR and Cybersecurity at Work.</li>
+  <li>IEEE Authorship and Open Access Symposium, online workshop by IEEE Publishing Services, 15 Oct 2025.</li>
+  <li>CONNECT EPE training: Engaging with Local Communities and Local Authorities, 29 May 2025.</li>
+  <li>COALESCE Plenary and Training School, 8 to 9 Apr 2025.</li>
+  <li>Python Programming: A Concise Introduction, Wesleyan University (Coursera).</li>
+  <li>Workshop on Data Analytics Using Python, Institute of Business Administration, Sukkur, Pakistan, 3 to 4 Jan 2022.</li>
+ </ul>
+</section>
+
+<section id="experience">
+ <h2>Experience and education</h2>
+ <div class="role"><h3>PhD researcher, Walton Institute, SETU</h3><p class="when">Feb 2023 to present, Waterford, Ireland</p><p>SFI CONNECT Project, UAVSec. See Research above.</p></div>
+ <div class="role"><h3>Part time teaching work, South East Technological University</h3><p class="when">Jan 2024 to May 2026, Waterford, Ireland</p><p>Secure Programming and Scripting labs, assessment, and project supervision.</p></div>
+ <div class="role"><h3>Lecturer in computer science, SZABIST University Pakistan</h3><p class="when">Sep 2017 to Jan 2023, Larkana, Pakistan</p><p>Teaching, curriculum, accreditation, cluster leadership, and final year project coordination.</p></div>
+ <h3>Education</h3>
+ <div class="role"><h3>Doctor of Philosophy in Computing, <a href="https://www.wit.ie/" target="_blank" rel="noopener">South East Technological University</a></h3><p class="when">Mar 2023 to present, Waterford, Ireland</p><p>Thesis: Artificial Intelligence enabled UAV Cybersecurity. Field: Information and Communication Technologies.</p></div>
+ <div class="role"><h3>MS Electrical (Telecommunication) Engineering, <a href="http://mcs.nust.edu.pk/" target="_blank" rel="noopener">Military College of Signals (MCS), NUST</a></h3><p class="when">Sep 2013 to Jun 2017, Islamabad, Pakistan. Final grade 3.2</p><p>Wireless communication and signal processing: coding and compression techniques, channel modelling, Hidden Markov Models, Viterbi decoding, and digital and optical communication systems. Coursework included Advanced Digital Communication Systems, Information and Coding Theory, Advanced Digital Signal Processing, Stochastic Process, Advanced Digital Wireless Communications, Optical Communication Systems, Time Frequency Analysis, and Applied Signal Processing.</p></div>
+ <div class="role"><h3>BE Telecommunication Engineering, <a href="https://www.muet.edu.pk/" target="_blank" rel="noopener">Mehran University of Engineering and Technology</a></h3><p class="when">Jan 2008 to Dec 2011, Jamshoro, Pakistan. Final grade 3.2</p><p>Thesis: Medium Access Control for Next Generation Optical Networks. We designed a protocol for throughput control of NGN optical networks to maintain throughput and provide better QoS to users.</p></div>
+</section>
+
+<section id="skills">
+ <h2>Skills</h2>
+ <h3>Teaching and academic work</h3>
+ <ul class="tags"><li>Practical lab and tutorial delivery</li><li>e-learning</li><li>Moodle</li><li>Course and assessment work</li><li>Curriculum and academic support</li><li>Student and departmental activities</li></ul>
+ <h3>UAV and cyber physical systems</h3>
+ <ul class="tags"><li>PX4</li><li>Gazebo</li><li>ROS / MAVROS</li><li>QGroundControl</li><li>MAVLink</li><li>Flight log and telemetry analysis</li></ul>
+ <h3>Programming, networking and security</h3>
+ <ul class="tags"><li>Python</li><li>Machine learning</li><li>MATLAB</li><li>Arduino</li><li>Multisim</li><li>Cisco Packet Tracer</li><li>Router and switch configuration</li><li>Wireshark</li><li>Cryptography (AES, DES, RSA)</li><li>Linux Ubuntu</li><li>Windows</li></ul>
+ <h3>Research and writing</h3>
+ <ul class="tags"><li>Research methodology</li><li>Research and analytical skills</li><li>LaTeX / Overleaf</li><li>Microsoft Office</li></ul>
+</section>
+
+<section id="contact">
+ <h2>Contact</h2>
+ <p>Email: iftikhar.tahiri@gmail.com<br>SETU email: muhammad-iftikhar.umrani@setu.ie</p>
+ <p><a href="https://www.linkedin.com/in/iftikharumrani" target="_blank" rel="noopener">LinkedIn</a><br><a href="https://waltoninstitute.ie/about/staff/muhammad-iftikhar-umrani" target="_blank" rel="noopener">Walton Institute staff page</a></p>
+</section>
+<footer>Iftikhar Umrani, Waterford, Ireland.</footer>
+</main>
+</div>
+<script>
+(function(){
+ var btns=document.querySelectorAll('.filters button'),rows=document.querySelectorAll('#acts .log>li'),heads=document.querySelectorAll('#acts h3.yr');
+ var active={};
+ function apply(){
+  var any=Object.keys(active).some(function(k){return active[k]});
+  rows.forEach(function(r){r.hidden=any&&!active[r.dataset.type]});
+  heads.forEach(function(h){var ul=h.nextElementSibling;var vis=ul.querySelectorAll('li:not([hidden])').length>0;h.hidden=!vis;ul.hidden=!vis});
+ }
+ btns.forEach(function(b){b.addEventListener('click',function(){
+  var k=b.dataset.f;active[k]=!active[k];b.setAttribute('aria-pressed',active[k]?'true':'false');apply();
+ })});
+ var links=document.querySelectorAll('nav a'),secs=[].map.call(links,function(l){return document.querySelector(l.getAttribute('href'))});
+ if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-20% 0px -70% 0px'});
+  secs.forEach(function(s){if(s)io.observe(s)});
+ }
+})();
+</script>
+</body>
+</html>
